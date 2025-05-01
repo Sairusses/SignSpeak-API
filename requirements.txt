@@ -1,0 +1,7 @@
+mediapipe
+opencv-python
+uvicorn
+fastapi
+numpy
+pyspellchecker
+keras
