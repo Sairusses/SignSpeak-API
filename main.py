@@ -20,7 +20,7 @@ async def predict_sign_language(video: UploadFile = File(...)):
     os.makedirs("temp", exist_ok=True)
     temp_video_path = os.path.join("temp", video.filename)
     with open(temp_video_path, "wb") as buffer:
-        shutil.copyfileobj(video.file, buffer)
+        shutil.copyfileobj(video.file, buffer) # buffer Expected type 'SupportsWrite[bytes]' (matched generic type 'SupportsWrite[AnyStr ≤: str | bytes]'), got 'BufferedWriter' instead
 
     # Step 1: Extract frames
     frames = extract_frames(temp_video_path)

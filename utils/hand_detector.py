@@ -3,6 +3,7 @@ import mediapipe as mp
 
 mp_hands = mp.solutions.hands
 
+
 def process_frames_with_mediapipe(frames):
     hands = mp_hands.Hands(static_image_mode=True, max_num_hands=1)
     hand_frames = []
